@@ -5,7 +5,8 @@ async function getData() {
         throw new Error('Error with network response');
       }
       const data = await response.json();
-      console.log(JSON.stringify(data)); // JSON.stringify optional to use with JSON pretty printer online & ensure all book information included.
+      console.log(data);
+     // console.log(JSON.stringify(data)); // (Uncomment to use) JSON.stringify optional to use with JSON pretty printer online & ensure all book information included.
     } catch (error) {
       console.error(error);
     }

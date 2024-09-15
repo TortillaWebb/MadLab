@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/Scripts/StandardRequest.js" afterDir="false" />
+    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Created StandardRequest.js with standard asynchronous GET request to https://gutendex.com/books/">
+      <change afterPath="$PROJECT_DIR$/src/Scripts/ToUpperCase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scripts/StandardRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/StandardRequest.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726390086141</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created StandardRequest.js with standard asynchronous GET request to https://gutendex.com/books/">
+      <option name="closed" value="true" />
+      <created>1726390769667</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726390769667</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Created StandardRequest.js with standard asynchronous GET request to https://gutendex.com/books/" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created StandardRequest.js with standard asynchronous GET request to https://gutendex.com/books/" />
   </component>
 </project>
