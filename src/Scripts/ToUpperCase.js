@@ -1,5 +1,5 @@
 function mapToUpperCase(book) {
-   var subjects = book.subjects.map(subject => subject.toUpperCase());
+   let subjects = book.subjects.map(subject => subject.toUpperCase());
    return {...book, subjects:subjects};
 }
 
