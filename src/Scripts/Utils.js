@@ -1,9 +1,19 @@
 async function getData() {
     try {
         const response = await fetch('https://gutendex.com/books/');
-        if (!response.ok) {
-            throw new Error('Error with network response');
+        if (response.status === 400) {
+            throw new error('Bad request.')
+
+        } else if (response.status === 404) {
+            throw new error('Page not found.')
+
+        } else if (response.status === 500) {
+            throw new error('Internal server error.')
+
+        } else if (!response.ok) {
+            throw new Error('Error with network response. Response status code =', response.status);
         }
+
         const rawData = await response.json();
         const data = rawData.results;
         console.log(data);
@@ -13,6 +23,8 @@ async function getData() {
         console.error(error);
     }
 }
+
+// 404, 400,
 
 function mapToUpperCase(book) {
     const subjects = book.subjects.map(subject => subject.toUpperCase());
