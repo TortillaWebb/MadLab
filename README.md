@@ -1,4 +1,4 @@
-# MadLab Technical Test Solutions
+# Madlab
 
 This project is a collection of tasks and solutions, written using project Gutendex.
 
