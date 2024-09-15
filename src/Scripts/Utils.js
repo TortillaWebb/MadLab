@@ -5,7 +5,7 @@ async function getData() {
             throw new Error('Error with network response');
         }
         const rawData = await response.json();
-        data = rawData.results;
+        const data = rawData.results;
         console.log(data);
         return data;
         // console.log(JSON.stringify(data)); // (Uncomment to use) JSON.stringify optional to use with JSON pretty printer online & ensure all book information included.
@@ -15,7 +15,7 @@ async function getData() {
 }
 
 function mapToUpperCase(book) {
-    let subjects = book.subjects.map(subject => subject.toUpperCase());
+    const subjects = book.subjects.map(subject => subject.toUpperCase());
     return {...book, subjects:subjects};
 }
 
@@ -40,7 +40,6 @@ function filterByDeathDate(book) {
     let result = false;
 
     book.authors.forEach(author => {
-        // Assuming that we want results if ALL authors have been alive since 1824, not just some.
         if (author.death_year !== null && author.death_year > 1824) {
             result = true;
         }
@@ -67,14 +66,16 @@ async function retrieveFilteredArray() {
 }
 
 function findAuthor(author) {
+
     let result = false;
     if (author.name.toLowerCase() === "dostoyevsky, fyodor") {
         result = true;
     }
     return result;
 }
-
-let address = 'https://gutendex.com/books/';
+// I considered making this function not recursive, as if the entry was found on a high page number there is the
+// possibility of a stack overflow. With less time constraints and after conducting unit testing I would likely
+// change this to some form of a loop instead.
 
 async function findEntry(address) {
     try {
@@ -104,6 +105,7 @@ async function findEntry(address) {
             return [foundBook];
         } else {
             console.log("Entry not found on page", address, ". Checking next page of entries...");
+            document.getElementById("resultDiv").innerHTML = "<p>Entry not found on page" + address + ". Checking next page of entries...</p>";
             return await findEntry(data.next);
         }
     } catch (error) {
@@ -112,34 +114,30 @@ async function findEntry(address) {
 }
 
 async function allBooksTable(func) {
-    let data = await func();
-    let headings = ["id", "title", "authors", "translators", "subjects", "bookshelves", "languages", "copyright", "media_type"];
-    let rows = data.map(function (book) {
-        return headings.map(function (key) {
-            return book[key];
-        });
-    });
-    let table = getTable(headings, rows);
-    clearDiv("resultDiv");
-    htmlInsert("resultDiv", table);
+    const data = await func();
+    const headings = ["id", "title", "authors", "translators", "subjects", "bookshelves", "languages", "copyright", "media_type"];
+   renderTable(data, headings)
 }
 
 async function searchResultTable() {
-    let data = await findEntry('https://gutendex.com/books/');
-    console.log(data);
-    let headings = ["id", "title", "authors", "translators", "subjects", "bookshelves", "languages", "copyright", "media_type", "address"];
-    let rows = data.map(function (book) {
+    const data = await findEntry('https://gutendex.com/books/');
+    const headings = ["id", "title", "authors", "translators", "subjects", "bookshelves", "languages", "copyright", "media_type", "address"];
+    renderTable(data, headings)
+}
+
+function renderTable(data, headings) {
+    const rows = data.map(function (book) {
         return headings.map(function (key) {
             return book[key];
         });
     });
-    let table = getTable(headings, rows);
+    const table = getTable(headings, rows);
     clearDiv("resultDiv");
     htmlInsert("resultDiv", table);
 }
 
 function getTable(headings, rows) {
-    var table = "<table border='1' class='table table-dark table-striped'>\n" +
+    const table = "<table border='1' class='table table-dark table-striped'>\n" +
         getTableHeadings(headings) +
         getTableBody(rows) +
         "</table>";
@@ -147,8 +145,8 @@ function getTable(headings, rows) {
 }
 
 function getTableHeadings(headings) {
-    var firstRow = "  <tr>";
-    for (var i = 0; i < headings.length; i++) {
+    let firstRow = "  <tr>";
+    for (let i = 0; i < headings.length; i++) {
         firstRow += "<th>" + headings[i] + "</th>";
     }
     firstRow += "</tr>\n";
@@ -156,11 +154,11 @@ function getTableHeadings(headings) {
 }
 
 function getTableBody(rows) {
-    var body = "";
-    for(var i=0; i<rows.length; i++) {
+    let body = "";
+    for(let i=0; i<rows.length; i++) {
         body += "  <tr>";
-        var row = rows[i];
-        for(var j=0; j<row.length; j++) {
+        const row = rows[i];
+        for(let j=0; j<row.length; j++) {
             if (typeof(row[j]) == "number"){
                 body += "<td>" + row[j] + "</td>";
             } else if (typeof(row[j]) == "string"){
@@ -175,6 +173,7 @@ function getTableBody(rows) {
             } else if (typeof row[j] == "object" && Array.isArray(row[j]) && row[j].length > 0 && row[j][0].hasOwnProperty('name')) {
                 let personData = "";
                 row[j].forEach((person) => {
+
                     let temp = "<p> Name: " + person.name + "</p>"
                     + "<p> Birth Year: " + person.birth_year + "</p>"
                     + "<p> Death Year : " + person.death_year + "</p>"
@@ -186,14 +185,14 @@ function getTableBody(rows) {
                 body += "<td>" + row[j] + "</td>";
             }
         }
+
         body += "</tr>\n";
     }
     return(body);
 }
 
 function clearDiv(divID) {
-    let div = document.getElementById(divID);
-    div.innerHTML = "";
+    document.getElementById(divID).innerHTML = "";
 }
 
 function htmlInsert(id, htmlData) {
