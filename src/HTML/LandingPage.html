@@ -15,17 +15,33 @@
 
 <h1> Tia's MadLab Tech Test Solutions :) </h1>
 
-<p> Hello and welcome to my tech test solutions!</p>
-<p> The buttons below will display the output from each completed task. </p>
-<p> <b>Task One</b>: Make a standard async GET request and sort the data in ascending order by ID. </p>
-<p> <b>Task Two</b>: Modify each book entry's 'Subject' array to be upper case using array.map </p>
-<p> <b>Task Three</b>: Remove all entries whose author didn't exist within the last 200 years using array.filter</p>
-<p> <b>Task Four</b>: Find the entry: Short Stories, by Dostoyevsky, Theodor. </p>
+<p class="text-center"> Hello and welcome to my tech test solutions!</p>
+<p class="text-center"> The buttons below will display the output from each of the following completed tasks. </p>
 
-<button type="button" class="btn btn-dark" onclick='allBooksTable(getData)'>Solution One</button>
-<button type="button" class="btn btn-dark" onclick='allBooksTable(retrieveUpperCaseArray)'>Solution Two</button>
-<button type="button" class="btn btn-dark" onclick='allBooksTable(retrieveFilteredArray)'>Solution Three</button>
-<button type="button" class="btn btn-dark" onclick='searchResultTable()'>Solution Four</button>
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item"><b>Task One</b>: Make a standard async GET request and sort the data in ascending order by ID.</li>
+  <li class="list-group-item"><b>Task Two</b>: Modify each book entry's 'Subject' array to be upper case using array.map</li>
+  <li class="list-group-item"><b>Task Three</b>: Remove all entries whose author didn't exist within the last 200 years using array.filter</li>
+  <li class="list-group-item"><b>Task Four</b>: Find the entry: Short Stories, by Dostoyevsky, Theodor.</li>
+</ol>
+
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+      <button type="button" class="btn btn-dark" onclick='allBooksTable(getData)'>Solution One</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-dark" onclick='allBooksTable(retrieveUpperCaseArray)'>Solution Two</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-dark" onclick='allBooksTable(retrieveFilteredArray)'>Solution Three</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-dark" onclick='searchResultTable()'>Solution Four</button>
+    </div>
+  </div>
+</div>
+
 <div id="resultDiv"></div>
 </body>
 </html>

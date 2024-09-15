@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Created and implemented style.css">
-      <change afterPath="$PROJECT_DIR$/src/Assets/MadLabLogo.jpg" afterDir="false" />
+    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Added MadLab logo as image on landing page and as favicon.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/MadLab_Favicon.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HTML/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/LandingPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +121,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726390025678</updated>
-      <workItem from="1726393131778" duration="18865000" />
+      <workItem from="1726393131778" duration="19982000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -206,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726411182166</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added MadLab logo as image on landing page and as favicon.">
+      <option name="closed" value="true" />
+      <created>1726412682357</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726412682357</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +238,7 @@
     <MESSAGE value="Written HTML for LandingPage.html &#10;Created node.js server &#10;Consolidated javascript functions to one script - Utils.js &#10;Connected HTML button one to Javascript functions to fetch and display data. &#10;Written allBooksTable(), getTable(), getTableHeadings(), getTableBody(), clearDiv() and htmlInsert functions." />
     <MESSAGE value="Deleted separate JS scripts as the functions have been consolidated in Utils.js.  &#10;&#10;Connected HTML buttons on landing page to backend JavaScript functions." />
     <MESSAGE value="Created and implemented style.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created and implemented style.css" />
+    <MESSAGE value="Added MadLab logo as image on landing page and as favicon." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MadLab logo as image on landing page and as favicon." />
   </component>
 </project>
