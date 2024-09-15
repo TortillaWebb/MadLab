@@ -139,7 +139,7 @@ async function searchResultTable() {
 }
 
 function getTable(headings, rows) {
-    var table = "<table border='1' class='ajaxTable'>\n" +
+    var table = "<table border='1' class='table table-dark table-striped'>\n" +
         getTableHeadings(headings) +
         getTableBody(rows) +
         "</table>";

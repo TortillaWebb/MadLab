@@ -21,6 +21,22 @@ const server = createServer((req, res) => {
             break;
         }
 
+        case '/Assets/MadLab_Favicon.png': {
+            const data = fs.readFileSync('../Assets/MadLab_Favicon.png', 'utf8');
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'image/png');
+            res.end(data);
+            break;
+        }
+
+        case '/Assets/style.css': {
+            const data = fs.readFileSync('../Assets/style.css', 'utf8');
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/css');
+            res.end(data);
+            break;
+        }
+
         default: {
             const data = fs.readFileSync('../HTML/LandingPage.html', 'utf8');
             res.statusCode = 200;
