@@ -4,7 +4,8 @@ async function getData() {
         if (!response.ok) {
             throw new Error('Error with network response');
         }
-        const data = await response.json();
+        const rawData = await response.json();
+        data = rawData.results;
         console.log(data);
         return data;
         // console.log(JSON.stringify(data)); // (Uncomment to use) JSON.stringify optional to use with JSON pretty printer online & ensure all book information included.
@@ -29,7 +30,7 @@ async function retrieveUpperCaseArray() {
         const upperCaseArray = bookArray.map(mapToUpperCase);
         console.log("Retrieved books with upper case subject", upperCaseArray);
         //  console.log("Retrieved books with upper case subject", JSON.stringify(upperCaseArray)); // Optional JSON.stringify version for data checking
-
+        return upperCaseArray;
     } catch (error) {
         console.error(error);
     }
@@ -56,7 +57,8 @@ async function retrieveFilteredArray() {
         const data = await response.json();
         const books = data.results;
         const filteredBooks = books.filter(filterByDeathDate);
-        console.log(filteredBooks)
+        console.log(filteredBooks);
+        return filteredBooks;
         // console.log(JSON.stringify(filteredBooks)); // Optional Stringify version for data checking with pretty printer
 
     } catch (error) {
@@ -83,32 +85,50 @@ async function findEntry(address) {
         const data = await response.json();
         const books = data.results;
         let authorFound = false;
+        let foundBook;
 
         books.forEach(book => {
 
             if (book.title != null && book.title.toLowerCase() === "short stories") {
-                let matchingAuthorArray = book.authors.filter(findAuthor);
+                 let matchingAuthorArray = book.authors.filter(findAuthor);
 
                 if (matchingAuthorArray != null) {
                     authorFound = true;
+                    foundBook = book;
                 }
             }});
 
         if (authorFound === true) {
             console.log("Entry found on page", address);
+            foundBook.address = address;
+            return [foundBook];
         } else {
             console.log("Entry not found on page", address, ". Checking next page of entries...");
-            await findEntry(data.next);
+            return await findEntry(data.next);
         }
     } catch (error) {
         console.error(error);
     }
 }
 
-async function allBooksTable() {
-    let data = await getData();
+async function allBooksTable(func) {
+    let data = await func();
     let headings = ["id", "title", "authors", "translators", "subjects", "bookshelves", "languages", "copyright", "media_type"];
-    let rows = data.results.map(function (book) {
+    let rows = data.map(function (book) {
+        return headings.map(function (key) {
+            return book[key];
+        });
+    });
+    let table = getTable(headings, rows);
+    clearDiv("resultDiv");
+    htmlInsert("resultDiv", table);
+}
+
+async function searchResultTable() {
+    let data = await findEntry('https://gutendex.com/books/');
+    console.log(data);
+    let headings = ["id", "title", "authors", "translators", "subjects", "bookshelves", "languages", "copyright", "media_type", "address"];
+    let rows = data.map(function (book) {
         return headings.map(function (key) {
             return book[key];
         });

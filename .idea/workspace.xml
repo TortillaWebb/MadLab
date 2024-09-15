@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Created server.js &amp; LandingPage.html">
-      <change afterPath="$PROJECT_DIR$/src/Scripts/Utils.js" afterDir="false" />
+    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Written HTML for LandingPage.html &#10;Created node.js server &#10;Consolidated javascript functions to one script - Utils.js &#10;Connected HTML button one to Javascript functions to fetch and display data. &#10;Written allBooksTable(), getTable(), getTableHeadings(), getTableBody(), clearDiv() and htmlInsert functions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HTML/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/LandingPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scripts/Filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scripts/FindEntry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scripts/StandardRequest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scripts/ToUpperCase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scripts/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/Utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726390025678</updated>
-      <workItem from="1726393131778" duration="12731000" />
+      <workItem from="1726393131778" duration="14936000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -175,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726396853392</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Written HTML for LandingPage.html &#10;Created node.js server &#10;Consolidated javascript functions to one script - Utils.js &#10;Connected HTML button one to Javascript functions to fetch and display data. &#10;Written allBooksTable(), getTable(), getTableHeadings(), getTableBody(), clearDiv() and htmlInsert functions.">
+      <option name="closed" value="true" />
+      <created>1726406745100</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726406745100</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +210,7 @@
     <MESSAGE value="Created Filter.js" />
     <MESSAGE value="Created FindEntry.js. &#10;Updated Filter.js &amp; ToUpperCase.js to remove small errors." />
     <MESSAGE value="Created server.js &amp; LandingPage.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created server.js &amp; LandingPage.html" />
+    <MESSAGE value="Written HTML for LandingPage.html &#10;Created node.js server &#10;Consolidated javascript functions to one script - Utils.js &#10;Connected HTML button one to Javascript functions to fetch and display data. &#10;Written allBooksTable(), getTable(), getTableHeadings(), getTableBody(), clearDiv() and htmlInsert functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Written HTML for LandingPage.html &#10;Created node.js server &#10;Consolidated javascript functions to one script - Utils.js &#10;Connected HTML button one to Javascript functions to fetch and display data. &#10;Written allBooksTable(), getTable(), getTableHeadings(), getTableBody(), clearDiv() and htmlInsert functions." />
   </component>
 </project>
