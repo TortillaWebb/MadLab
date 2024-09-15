@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Created Filter.js">
-      <change afterPath="$PROJECT_DIR$/src/Scripts/FindEntry.js" afterDir="false" />
+    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Created server.js &amp; LandingPage.html">
+      <change afterPath="$PROJECT_DIR$/src/HTML/LandingPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scripts/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/Filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/ToUpperCase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/ToUpperCase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -40,6 +40,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -51,6 +54,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -112,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726390025678</updated>
-      <workItem from="1726393131778" duration="1735000" />
+      <workItem from="1726393131778" duration="3254000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -154,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726393362265</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Created FindEntry.js. &#10;Updated Filter.js &amp; ToUpperCase.js to remove small errors.">
+      <option name="closed" value="true" />
+      <created>1726395422385</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726395422385</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +188,8 @@
     <MESSAGE value="Created StandardRequest.js with standard asynchronous GET request to https://gutendex.com/books/" />
     <MESSAGE value="Created ToUpperCase.js" />
     <MESSAGE value="Created Filter.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Filter.js" />
+    <MESSAGE value="Created FindEntry.js. &#10;Updated Filter.js &amp; ToUpperCase.js to remove small errors." />
+    <MESSAGE value="Created server.js &amp; LandingPage.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created server.js &amp; LandingPage.html" />
   </component>
 </project>
