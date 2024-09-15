@@ -21,10 +21,10 @@ const server = createServer((req, res) => {
             break;
         }
 
-        case '/Assets/MadLab_Favicon.png': {
-            const data = fs.readFileSync('../Assets/MadLab_Favicon.png', 'utf8');
+        case '/Assets/MadLabLogo.jpg': {
+            const data = fs.readFileSync('../Assets/MadLabLogo.jpg');
             res.statusCode = 200;
-            res.setHeader('Content-Type', 'image/png');
+            res.setHeader('Content-Type', 'image/jpeg');
             res.end(data);
             break;
         }
@@ -49,3 +49,4 @@ const server = createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+

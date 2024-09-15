@@ -6,7 +6,8 @@ body {
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     color: #343a40;
     text-align: center;
 }
@@ -24,4 +25,11 @@ button {
 
 #resultDiv {
     margin-top: 20px;
+}
+
+#mainImage {
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
