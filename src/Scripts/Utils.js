@@ -24,8 +24,6 @@ async function getData() {
     }
 }
 
-// 404, 400,
-
 function mapToUpperCase(book) {
     const subjects = book.subjects.map(subject => subject.toUpperCase());
     return {...book, subjects:subjects};
@@ -58,6 +56,7 @@ function filterByDeathDate(book) {
     });
     return result;
 }
+//Task 3: I am making the assumption that if ANY of the authors died before 1824 that the book should not be included in the filtered results.
 
 async function retrieveFilteredArray() {
     try {
@@ -76,6 +75,8 @@ async function retrieveFilteredArray() {
         console.error(error);
     }
 }
+
+// Task 4: I am making the assumption that Fyodor = Theodore.
 
 function findAuthor(author) {
 
