@@ -24,6 +24,22 @@ async function getData() {
     }
 }
 
+async function getDataAscendingOrder() {
+    try {
+        const response = await fetch('https://gutendex.com/books/');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        const bookArray = data.results;
+        const bookArrayAscending = bookArray.sort((a, b) => a.id - b.id);
+        console.log("Retrieved books by ID in ascending order", bookArrayAscending);
+        return bookArrayAscending;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 function mapToUpperCase(book) {
     const subjects = book.subjects.map(subject => subject.toUpperCase());
     return {...book, subjects:subjects};

@@ -22,10 +22,11 @@
 
 <div class="container container--max-width">
 <ol class="list-group list-group-numbered">
-  <li class="list-group-item"><b>Task One</b>: Make a standard async GET request and sort the data in ascending order by ID.</li>
-  <li class="list-group-item"><b>Task Two</b>: Modify each book entry's 'Subject' array to be upper case using array.map</li>
-  <li class="list-group-item"><b>Task Three</b>: Remove all entries whose author didn't exist within the last 200 years using array.filter</li>
-  <li class="list-group-item"><b>Task Four</b>: Find the entry: Short Stories, by Dostoyevsky, Theodor.</li>
+  <li class="list-group-item"><b>Task One</b>: Make a standard async GET request ordered by popularity.</li>
+  <li class="list-group-item"><b>Task Two</b>: Make a GET request and sort the data in ascending order by ID.</li>
+  <li class="list-group-item"><b>Task Three</b>: Modify each book entry's 'Subject' array to be upper case using array.map</li>
+  <li class="list-group-item"><b>Task Four</b>: Remove all entries whose author didn't exist within the last 200 years using array.filter</li>
+  <li class="list-group-item"><b>Task Five</b>: Find the entry: Short Stories, by Dostoyevsky, Theodor.</li>
 </ol>
 </div>
 
@@ -35,13 +36,16 @@
       <button type="button" class="btn btn-dark" onclick='allBooksTable(getData)'>Solution One</button>
     </div>
     <div class="col">
-      <button type="button" class="btn btn-dark" onclick='allBooksTable(retrieveUpperCaseArray)'>Solution Two</button>
+      <button type="button" class="btn btn-dark" onclick='allBooksTable(getDataAscendingOrder)'>Solution Two</button>
     </div>
     <div class="col">
-      <button type="button" class="btn btn-dark" onclick='allBooksTable(retrieveFilteredArray)'>Solution Three</button>
+      <button type="button" class="btn btn-dark" onclick='allBooksTable(retrieveUpperCaseArray)'>Solution Three</button>
     </div>
     <div class="col">
-      <button type="button" class="btn btn-dark" onclick='searchResultTable()'>Solution Four</button>
+      <button type="button" class="btn btn-dark" onclick='allBooksTable(retrieveFilteredArray)'>Solution Four</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-dark" onclick='searchResultTable()'>Solution Five</button>
     </div>
   </div>
 </div>

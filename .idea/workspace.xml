@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Added additional error handling to getData() function. Improved error handling specific to request status codes.">
+    <list default="true" id="d8cd6799-1651-4ac6-a3e3-7235f88c326e" name="Changes" comment="Added comments regarding assumptions made about tasks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTML/LandingPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTML/LandingPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scripts/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/Utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +121,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726390025678</updated>
-      <workItem from="1726393131778" duration="28968000" />
+      <workItem from="1726393131778" duration="29256000" />
+      <workItem from="1726476515227" duration="833000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -242,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726422066547</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added comments regarding assumptions made about tasks">
+      <option name="closed" value="true" />
+      <created>1726422761511</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726422761511</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +284,7 @@
     <MESSAGE value="Code Refactoring: Some small improvements to front and back-end code. &#10;&#10;Created README." />
     <MESSAGE value="Updated README." />
     <MESSAGE value="Added additional error handling to getData() function. Improved error handling specific to request status codes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added additional error handling to getData() function. Improved error handling specific to request status codes." />
+    <MESSAGE value="Added comments regarding assumptions made about tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments regarding assumptions made about tasks" />
   </component>
 </project>
